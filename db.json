@@ -1,0 +1,104 @@
+{
+  "events": [
+    {
+      "title": "Handla på Ica",
+      "body": "Köp mat: sdkfasdf, asdkföaksd, asdfkdf, sdkfasdf, asdkföaksd, asdfkdf, sdkfasdf, asdkföaksd, asdfkdf",
+      "time": "2022-05-27T10:00",
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "title": "Städa",
+      "body": "Prio 1 sdkasdf adfasd asdfasdf\nPrio 2 dfasdf asdfasdf asdfasdf",
+      "time": "2022-05-26T15:15",
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "title": "Vattna trädgård",
+      "body": "Gurkorna i växthus\nTomatplantorna i boden\nPallkragarna baksida\nRabatter framsida",
+      "time": "2022-06-05T17:30",
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "title": "Shoppa",
+      "body": "HM köp xczdkf kasjdfö sdf sadf. Kicks askdfö asdf södf. Glitter dfjaösdk kasdföj sdkfj as.",
+      "time": "2022-06-09T10:30",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "title": "Middag stan",
+      "body": "Sdfas sdf sdfsdf asdfa asdöfkj asdfk sdjföksdf sdf. sdfsdf asdfa asdöfkj asdfk sdjföksdf sdf",
+      "time": "2022-05-25T18:00",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "title": "Städa",
+      "body": "Städa först xvkösdf sjdfj ösdfj sdf sadfsa \nStäda sen södfkjasdfkj sjdföj sdfj södfj s",
+      "time": "2022-05-24T10:00",
+      "userId": "2",
+      "id": 6
+    },
+    {
+      "title": "Tatoo",
+      "body": "D ksdfj sdfökj sdkf sjfföksjdfj ksjdföj sdf asdfjö sdfj sadjf öfskdjf ",
+      "time": "2022-05-01T19:00",
+      "userId": "2",
+      "id": 7
+    },
+    {
+      "title": "Repa",
+      "body": "Fsdfe sadf adsf eaö efr dsafsdfj  sadfjsödf sadf ösdf asdf asfsdf sdf ",
+      "time": "2022-05-25T21:00",
+      "userId": 3,
+      "id": 8
+    },
+    {
+      "title": "Test with long long long long long long long long  headline",
+      "body": "fkasdjf öjdfj ödfkj öskdfjöasj ",
+      "time": "2022-06-30T10:10",
+      "userId": "2",
+      "id": 9
+    },
+    {
+      "title": "Test even longer long long long long long long long long longlong long long long long long",
+      "body": "sdfkj ösdkfjaskdjf kdfj ösdfkj kösdfjö dfjkas djfkösdjf öaskjf sfj ",
+      "time": "2022-05-31T16:00",
+      "userId": "2",
+      "id": 10
+    }
+  ],
+  "users": [
+    {
+      "email": "lin@mail.com",
+      "password": "$2a$10$1nWDIiDqrQPdzTJJQtbA6.FbVO9tyNddov1ncxPvh9PaNytmD1u7u",
+      "firstName": "Lin",
+      "lastName": "Nor",
+      "id": 1
+    },
+    {
+      "email": "thin@mail.com",
+      "password": "$2a$10$0EJz6ZPEErDJYjMFXDLz8e3zvpnYdxNXOWYnlrGnjuFxu2I0Py1Qe",
+      "firstName": "Thin",
+      "lastName": "Lizzy",
+      "id": 2
+    },
+    {
+      "email": "don@mail.com",
+      "password": "$2a$10$ufUI2yQ5EqtNdhKKwM7COu1jqlZHB.NufkGd50UeiNE6Z7NpiCEDu",
+      "firstName": "Don",
+      "lastName": "Dokken",
+      "id": 3
+    },
+    {
+      "email": "test@mail.com",
+      "password": "$2a$10$DV6zSLZu0E7mdZvE2jrS4etLa/6kL88h6RgTSI2VRIveyJrPhBKKm",
+      "firstName": "Test",
+      "lastName": "Test",
+      "id": 4
+    }
+  ]
+}
