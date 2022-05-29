@@ -2,9 +2,13 @@
 
 :root {
   /* --clr-primary: #c7c7c7; */
-  --clr-primary: #fafafa;
-  --clr-red: rgb(122, 2, 2);
-  --clr-blue: rgb(39, 39, 70);
+  /* --clr-primary: #fafafa; */
+  --clr-primary: #dedede;
+  /* --clr-primary: rgb(39, 54, 54); */
+  --clr-gray: #2f4f4f;
+  --clr-light: #ececec;
+  --clr-red: rgb(123, 6, 6);
+  /* --clr-blue: rgb(39, 39, 70); */
 }
 * {
   margin: 0;
@@ -12,8 +16,7 @@
   box-sizing: border-box;
 }
 body, html {
-  /* font-family: 'Roboto', sans-serif;
-  font-weight: 400; */
+  /* font-weight: 400; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   /* background-color: darkslategray; */
   background-color: var(--clr-primary);
@@ -24,79 +27,95 @@ body, html {
   width: 90%;
   margin: 0 auto;
 }
-.red {
+.err-text {
   color: var(--clr-red);
+  font-weight: 700;
 }
-
+.err-small {
+  font-size: small;
+}
 .btn {
-  padding: 1em 2em;
+  background-color: var(--clr-gray);
+  color: #fff;
+  padding: .8em 2em;
   border-radius: .8rem;
   border: 0;
   outline: none;
   text-transform: uppercase;
-  font-size: .8rem;
-  font-weight: bold;
+  font-size: .9rem;
+  font-weight: 700;
   cursor: pointer;
 }
-.btn:hover {
-  background-color: #ececec;
-  font-size: .85rem;
+.btn-block {
+  display: block;
+  width: 100%;
+  border: 1px solid #d3d3d3;
+}
+.btn:hover,
+.btn-block:hover {
+  background-color: #284444;
+  border: 1px solid var(--clr-gray);
+  box-shadow: 4px 4px 7px #00000065;
+  padding-block: .7rem;
+  color: #fff;
+}
+.btn:active,
+.btn-block:active {
+  border: 1px solid var(--clr-gray);
+  padding-block: .6rem;
   box-shadow: 4px 4px 7px #00000065;
 }
-.btn:active {
-  background-color: #d3d3d3;
-  box-shadow: 4px 4px 7px #00000065;
+.nav-bg {
+  background-color: var(--clr-gray);
+  /* padding-block: .3rem; */
 }
-
+.nav-txt {
+  color: var(--clr-light);
+}
+nav .text-link {
+  color: var(--clr-light);
+  font-weight: 400;
+  padding: 1rem;
+}
+nav .text-link.active,
+nav .text-link:hover {
+  color: var(--clr-light);
+  font-weight: 700;
+}
 .text-link {
-  color: var(--clr-blue);
-  font-weight: bold;
-  /* text-decoration: underline; */
+  color: var(--clr-gray);
+  font-weight: 800;
   cursor: pointer;
 }
 .text-link:hover,
 .text-link:active {
-  color: var(--clr-blue);
-  /* color: yellow; */
-
+  color: var(--clr-gray);
   transform: scale(1.1);
-  /* font-weight: bold; */
-  /* text-decoration: underline; */
-  /* cursor: pointer; */
 }
 .headline {
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  color: var(--clr-gray);
+  transform: scale(1.5);
   font-weight: 900;
-}
-.active {
-  color: var(--clr-red);
-  font-weight: bold;
 }
 form textarea {
   resize: none;
 }
-/*  */
-/* .form-control {
+.form-control {
   display: block;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: .4rem;
   padding: .5rem;
-  border-radius: .5rem;
-  border: 1px solid #bababa;
+  border-radius: .8rem;
+  border: 1px solid #d3d3d3;
   outline: none;
 }
-.input-group label {
-  display: block;
-  margin-bottom: .3rem;
-} */
-/*  */
 .form-control:focus {
-  border: none;
+  border: none;  
   /* blir så skarp blåfärg annars, med bootstrap... */
-  /* border-color: var(--clr-blue); */
 }
 .bg-card {
-  /* background-color: #fafafa; */
+  background-color: #fff;
+  margin-bottom: .3rem;
   padding: 1rem; 
   border-radius: .8rem;
   min-width: 300px;
@@ -108,56 +127,31 @@ form textarea {
   box-shadow: 4px 4px 7px #00000065;
   border: 1px solid #d3d3d3;
 }
-
-/* test klasser till aktuella och history */
+/*events todo*/
 .bg-now {
   margin: 0;
   color: #000;
-  /* font-weight: 600; */
 }
+/*events history */
 .bg-past {
   margin: 0;
   color: #7a7a7a;
   font-weight: 400;
 }
-.bg-test {
-  background-color: aqua;
-}
 .circle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  /* min-width: 1em; */
   min-width: 100px;
   max-width: 150px;
   border-radius: 50%;
-  /* vertical-align: middle; */
   cursor: none;
   padding: 1rem;
   border: 0;
   background-color: #ececec;
-  /* word-wrap: break-word; */
-  /* word-break: keep-all; */
 }
-
 .circle:before {
   content:'';
-  /* float: left; */
-  /* display: flex; */
   width: auto;
   padding-bottom: 100%;
-  
 } 
-
-/* .circle {
-  cursor: none;
-  display: inline-block;
-  border: 1px solid var(--clr-red);
-  border-radius: 50%;
-  height: 5rem;
-  width: 5rem;
-} */
-
-/* .login-view {
-  background-color: #7a7a7a;
-} */

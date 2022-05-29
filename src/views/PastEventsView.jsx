@@ -22,7 +22,6 @@ const PastEventsView = () => {
   return (
     <div className='mt-3 px-3 col-12 col-md-10 col-lg-8 col-xl-6 mx-auto'>
       <h2 className='mb-4 p-2 text-center'>Events History</h2>
-      {/* <p className='bg-past text-end pe-2'>Event expire</p> */}
 
       { loading && <p>Loading...</p>}
 

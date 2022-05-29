@@ -34,7 +34,15 @@ const eventsReducer = (state = initState, action) => {
           data: [...state.data, action.payload],
           loading: false,
           error: null
-        }
+      }
+      
+      case actiontypes().events.removeOne:
+        return {
+          ...state,
+          data: [...state.data, action.payload],
+          loading: false,
+          error: null
+      }
 
 
     default:

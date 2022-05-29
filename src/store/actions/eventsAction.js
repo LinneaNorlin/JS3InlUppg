@@ -30,40 +30,19 @@ export const addEvent = (event) => { //vad är event? Allt jag stoppar in i para
   }
 }
 
-//test
-// export const deleteEvent = (id) => {
-//   return async dispatch => {
-//     dispatch(loading(true))
-//     try {
-//       const res = await axios.delete('http://localhost:8080/events/' + id)
-//       console.log(res.data)
-//       dispatch(removeOne(res.data))
-//     }
-//     catch(err) {
-//       dispatch(eventsFailure(err.message))
-//       // return
-//     }
-//   }
-// }
-// export const removeOne = (id) => {
-//   return {
-//       type: actiontypes().events.removeOne,
-//       payload: id //event.id el event & event i parantesen
-//   }
-// }
-// export const deleteEvent = (id) => {
-//   return async dispatch => {
-//     dispatch(loading(true))
-//     try {
-//       const res = await axios.delete('http://localhost:8080/events/' + id)
-//       dispatch(setEvents(res.data))
-//     }
-//     catch(err) {
-//       dispatch(eventsFailure(err.message))
-//     }
-//   }
-// }
+export const deleteEvent = (id) => {
+  return async dispatch => {
+    dispatch(loading(true))
 
+    try {
+      const res = await axios.delete('http://localhost:8080/events/' + id)
+      dispatch(loading(false))
+    } 
+    catch (err) {
+      dispatch(eventsFailure(err.message))
+    }
+  }
+}
 
 const addToList = (event) => {
   return {

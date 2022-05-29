@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 import { getEvents } from '../store/actions/eventsAction'
 import Event from '../components/Event'
 
-const EventsView = () => {
 
+const EventsView = () => {
   const dispatch = useDispatch()
   const { data: events, loading } = useSelector(state => state.events)
   const {userID} = useSelector(state => state.auth)
@@ -25,9 +25,7 @@ const EventsView = () => {
       <h2 className='mb-4 p-2 text-center'>Event List</h2>
       
       { loading && <p>Loading...</p>}
-
       { !events.length && <h4 className='text-center mt-5'>No events to show!</h4>}
-      
       { events
       .sort((a, b) => a.time > b.time ? 1 : -1)
       .filter(event => Date.parse(event.time) >= Date.now())
@@ -42,4 +40,5 @@ const EventsView = () => {
     </div>    
   )
 }
+
 export default EventsView

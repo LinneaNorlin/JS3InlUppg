@@ -42,17 +42,17 @@ export const clearEvent = () => {
   }
 }
 
-//test add deletebtn
-export const deleteEvent = (id) => {
-  return async dispatch => {
-    dispatch(loadEventStart())
+// //test add deletebtn
+// export const deleteEvent = (id) => {
+//   return async dispatch => {
+//     dispatch(loadEventStart())
 
-    try {
-      const res = await axios.delete('http://localhost:8080/events/' + id)
-      dispatch(loadEventSuccess(res.data))
-    } 
-    catch (err) {
-      dispatch(loadEventFailure(err.message))
-    }
-  }
-}
+//     try {
+//       const res = await axios.delete('http://localhost:8080/events/' + id)
+//       dispatch(loadEventSuccess(res.data))
+//     } 
+//     catch (err) {
+//       dispatch(loadEventFailure(err.message))
+//     }
+//   }
+// }

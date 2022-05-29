@@ -11,15 +11,8 @@ import PastEventsView from './PastEventsView'
 const Views = () => {
   return (
     <Routes>
-      {/* <Route path='/' element={ <EventsView /> } /> */}
-      {/* <Route path='/events/:id' element={ <EventDetailsView /> } /> */}
-      {/* <Route path='/create' element={ <CreateEventView /> } /> */}
-
-      <Route path='/events/:id' element={ 
-        <ProtectedRoute>
-          <EventDetailsView />
-        </ProtectedRoute>
-      } />
+      <Route path='/' element={ <LoginView /> } />
+ 
       <Route path='/events' element={ 
         <ProtectedRoute>
           <EventsView /> 
@@ -30,15 +23,16 @@ const Views = () => {
           <CreateEventView /> 
         </ProtectedRoute>
       } />
-      {/* test add route to history */}
       <Route path='/past' element={ 
         <ProtectedRoute>
           <PastEventsView /> 
         </ProtectedRoute>
       } />
-
-      {/* <Route path='/login' element={ <LoginView /> } /> */}
-      <Route path='/' element={ <LoginView /> } />
+      <Route path='/events/:id' element={ 
+        <ProtectedRoute>
+          <EventDetailsView />
+        </ProtectedRoute>
+      } />
 
     </Routes>
   )
