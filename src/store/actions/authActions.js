@@ -1,19 +1,14 @@
 import axios from 'axios'
 import actiontypes from '../actiontypes'
-// import jwt from 'jsonwebtoken'
 import jwt_decode from 'jwt-decode'
 
 const apiCall = (url, user, dispatch) => {
   axios.post(url, user)
   .then(res => {
-    // console.log(res.data) //accessToken och hela user
-    // console.log(user)//bara email och password
-    // console.log(res.data.user.id) //ger user id
-    dispatch(authSuccess(res.data))//plockar ut accessToken & hela user
+    dispatch(authSuccess(res.data))
   })
   .catch(err => dispatch(authFailure(err.message)))
 }
-
 
 export const registerUser = (user) => {
   return dispatch => {
@@ -39,15 +34,15 @@ export const checkUser = () => {
   return dispatch => {
     let token = localStorage.getItem('token')
     if(token) {
-      const data = { //lägger till const data för att få med user id när spara event
+      const data = { 
         accessToken: token,
         user: {
-          id: jwt_decode(token).sub //sub är user id i den decodade token (ser i consollen, i redux, state)
+          id: jwt_decode(token).sub
         }
       }
-      console.log(token)
+      // console.log(token)
       if(jwt_decode(token).exp * 1000 > Date.now()) {
-        dispatch(authSuccess(data)) //sätter data här ist för token i tidigare version, får med både token och userid
+        dispatch(authSuccess(data))
       } else {
         localStorage.removeItem('token')
       }

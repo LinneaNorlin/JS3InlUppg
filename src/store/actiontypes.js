@@ -5,7 +5,6 @@ const actiontypes = () => {
       loading: 'EVENTS_LOADING',
       failure: 'EVENT_FAILURE',
       addNewEvent: 'ADD_NEW_EVENT',
-      //test add deletebtn
       removeOne: 'REMOVE_ONE'
     },
     event: {

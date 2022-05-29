@@ -1,14 +1,8 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@400;700&display=swap'); */
-
 :root {
-  /* --clr-primary: #c7c7c7; */
-  /* --clr-primary: #fafafa; */
   --clr-primary: #dedede;
-  /* --clr-primary: rgb(39, 54, 54); */
   --clr-gray: #2f4f4f;
-  --clr-light: #ececec;
+  --clr-light: #fafafa;
   --clr-red: rgb(123, 6, 6);
-  /* --clr-blue: rgb(39, 39, 70); */
 }
 * {
   margin: 0;
@@ -16,12 +10,9 @@
   box-sizing: border-box;
 }
 body, html {
-  /* font-weight: 400; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  /* background-color: darkslategray; */
   background-color: var(--clr-primary);
   color: #000;
-  /* color: var(--clr-primary); */
 }
 .container {
   width: 90%;
@@ -36,7 +27,7 @@ body, html {
 }
 .btn {
   background-color: var(--clr-gray);
-  color: #fff;
+  color: var(--clr-light);
   padding: .8em 2em;
   border-radius: .8rem;
   border: 0;
@@ -49,25 +40,64 @@ body, html {
 .btn-block {
   display: block;
   width: 100%;
-  border: 1px solid #d3d3d3;
+  border: 1px solid var(--clr-gray);
 }
 .btn:hover,
 .btn-block:hover {
   background-color: #284444;
-  border: 1px solid var(--clr-gray);
+  color: var(--clr-light);
+  border: 2px solid var(--clr-gray);
   box-shadow: 4px 4px 7px #00000065;
-  padding-block: .7rem;
-  color: #fff;
+  transform: scale(1.01);
+  transition: transform 100ms ease;
 }
 .btn:active,
-.btn-block:active {
-  border: 1px solid var(--clr-gray);
-  padding-block: .6rem;
+.btn-block:active, {
+  background-color: #233939;
+  font-size: .9rem;
   box-shadow: 4px 4px 7px #00000065;
+  transform: scale(.99);
+  transition: transform 150ms ease-in;
+}
+.btn-confirm {
+  background-color: var(--clr-gray);
+  color: var(--clr-light);
+  font-size: .8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  padding: 0.5em .8em;
+  border-radius: .8rem;
+  border: 0;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn-yes {
+  width: 100%;
+  font-size: .9rem;
+}
+.btn-no {
+  width: 75%;
+  background-color: rgba(47, 79, 79, 0.85);
+  /* background-color: var(--clr-light); */
+  /* color: #000; */
+  /* font-weight: 400; */
+}
+.btn-confirm:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 4px 7px #00000075;
+}
+.btn-confirm:active {
+  transform: scale(.95);
+  transition: transform 100ms ease-out;
+}
+.confirm {
+  background-color: var(--clr-light);
+  border-radius: .8rem;
+  box-shadow: 4px 4px 7px #00000075;
 }
 .nav-bg {
   background-color: var(--clr-gray);
-  /* padding-block: .3rem; */
 }
 .nav-txt {
   color: var(--clr-light);
@@ -81,6 +111,7 @@ nav .text-link.active,
 nav .text-link:hover {
   color: var(--clr-light);
   font-weight: 700;
+  transition: font-weight 100ms ease-in-out;
 }
 .text-link {
   color: var(--clr-gray);
@@ -91,11 +122,19 @@ nav .text-link:hover {
 .text-link:active {
   color: var(--clr-gray);
   transform: scale(1.1);
+  transition: transform 150ms ease-out;
 }
 .headline {
   color: var(--clr-gray);
   transform: scale(1.5);
   font-weight: 900;
+}
+.subheadline {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 800;
+  /* color: var(--clr-gray); */
 }
 form textarea {
   resize: none;
@@ -110,39 +149,33 @@ form textarea {
   outline: none;
 }
 .form-control:focus {
-  border: none;  
-  /* blir så skarp blåfärg annars, med bootstrap... */
+  border: none;
 }
 .bg-card {
-  background-color: #fff;
+  background-color: var(--clr-light);
   margin-bottom: .3rem;
   padding: 1rem; 
+  border: 1px solid transparent;
+  outline: none;
   border-radius: .8rem;
-  min-width: 300px;
+  min-width: 250px;
   box-shadow: 3px 3px 5px #0000002f;
 }
-/* createeventview har shadow rounded p-3 */
 .bg-card:hover,
 .bg-card:active {
   box-shadow: 4px 4px 7px #00000065;
   border: 1px solid #d3d3d3;
+  transition: all 150ms ease;
 }
-/*events todo*/
-.bg-now {
-  margin: 0;
-  color: #000;
-}
-/*events history */
-.bg-past {
-  margin: 0;
-  color: #7a7a7a;
-  font-weight: 400;
+.event-details .bg-card:hover {
+  box-shadow: 3px 3px 5px #0000002f;
+  border: 1px solid transparent;
 }
 .circle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 100px;
+  min-width: 90px;
   max-width: 150px;
   border-radius: 50%;
   cursor: none;
@@ -155,3 +188,14 @@ form textarea {
   width: auto;
   padding-bottom: 100%;
 } 
+/*events todo*/
+.bg-now {
+  margin: 0;
+  color: #000;
+}
+/*events history */
+.bg-past {
+  margin: 0;
+  color: #727171;
+  font-weight: 400;
+}

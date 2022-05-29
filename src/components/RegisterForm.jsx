@@ -29,9 +29,9 @@ const RegisterForm = ({setLogin}) => {
   return (
     <div className='mt-3'>
       <h2 className='mb-4 p-2 text-center headline'>Event Tracker</h2>
-      <h4 className='mb-4 p-2 text-center'>Register</h4>
+      <h4 className='subheadline'>Register</h4>
 
-      <form className='p-3 col-12 col-md-10 col-lg-8 col-xl-6 mx-auto' onSubmit={handleSub}>
+      <form className='px-3 col-12 col-md-10 col-lg-8 col-xl-6 mx-auto' onSubmit={handleSub}>
         <div className="">
           <label htmlFor="firstName">First Name: </label>
           <input value={formData.firstName} onChange={onChange} type="text" id='firstName' name='firstName' className='form-control' required />

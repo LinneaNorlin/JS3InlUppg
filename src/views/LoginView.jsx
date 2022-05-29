@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-import LoginForm from '../components/LoginForm'
-import RegisterForm from '../components/RegisterForm'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import LoginForm from '../components/LoginForm'
+import RegisterForm from '../components/RegisterForm'
 
 
 const LoginView = () => {

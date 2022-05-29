@@ -27,9 +27,9 @@ const LoginForm = ({setLogin}) => {
   return (
     <div className='mt-3'>
       <h2 className='mb-4 p-2 text-center headline'>Event Tracker</h2>
-      <h4 className='mb-4 p-2 text-center'>Login</h4>
+      <h4 className='subheadline'>Login</h4>
 
-      <form className='p-3 col-12 col-md-10 col-lg-8 col-xl-6 mx-auto' onSubmit={handleSub}>
+      <form className='px-3 col-12 col-md-10 col-lg-8 col-xl-6 mx-auto' onSubmit={handleSub}>
         <div className="">
           <label htmlFor="email">Email: </label>
           <input value={formData.email} onChange={onChange} type="email" id='email' name='email' className='form-control' required />

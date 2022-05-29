@@ -1,11 +1,9 @@
 import actiontypes from "../actiontypes";
 import axios from 'axios'
 
-
 export const getEventById = (id) => {
   return async dispatch => {
     dispatch(loadEventStart())
-
     try {
       const res = await axios.get('http://localhost:8080/events/' + id)
       dispatch(loadEventSuccess(res.data))
@@ -41,18 +39,3 @@ export const clearEvent = () => {
     type: actiontypes().event.clearEvent
   }
 }
-
-// //test add deletebtn
-// export const deleteEvent = (id) => {
-//   return async dispatch => {
-//     dispatch(loadEventStart())
-
-//     try {
-//       const res = await axios.delete('http://localhost:8080/events/' + id)
-//       dispatch(loadEventSuccess(res.data))
-//     } 
-//     catch (err) {
-//       dispatch(loadEventFailure(err.message))
-//     }
-//   }
-// }

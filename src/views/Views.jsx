@@ -1,9 +1,9 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import { ProtectedRoute } from '../routes/ProtectedRoute'
 import EventsView from './EventsView'
 import EventDetailsView from './EventDetailsView'
 import CreateEventView from './CreateEventView'
-import { ProtectedRoute } from '../routes/ProtectedRoute'
 import LoginView from './LoginView'
 import PastEventsView from './PastEventsView'
 
