@@ -82,7 +82,7 @@ const EventDetailsView = () => {
           <button 
             className='btn mt-2 d-flex align-items-center ps-3 pe-4' 
             onClick={handleDelete}>
-            <i className="fa-solid fa-trash-can err-text h3 p-0 m-0"></i>
+            <i className="fa-solid fa-trash-can err-text h5 p-0 m-0"></i>
             <span className='ms-2'> Delete event</span>
           </button>
         </div>

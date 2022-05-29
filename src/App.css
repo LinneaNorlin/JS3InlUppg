@@ -79,9 +79,6 @@ body, html {
 .btn-no {
   width: 75%;
   background-color: rgba(47, 79, 79, 0.85);
-  /* background-color: var(--clr-light); */
-  /* color: #000; */
-  /* font-weight: 400; */
 }
 .btn-confirm:hover {
   transform: scale(1.1);
@@ -126,7 +123,7 @@ nav .text-link:hover {
 }
 .headline {
   color: var(--clr-gray);
-  transform: scale(1.5);
+  font-size: 250%;
   font-weight: 900;
 }
 .subheadline {
@@ -134,7 +131,6 @@ nav .text-link:hover {
   padding: 1rem;
   text-align: center;
   font-weight: 800;
-  /* color: var(--clr-gray); */
 }
 form textarea {
   resize: none;

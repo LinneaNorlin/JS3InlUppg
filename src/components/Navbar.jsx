@@ -9,7 +9,7 @@ const Navbar = () => {
   
   return (
     <nav className="navbar-expand-lg nav-txt nav-bg sticky-top mb-3">
-      <div className="container-fluid ms-2 p-1">
+      <div className="container-fluid">
 
         { isAuth      
         ? (<>
